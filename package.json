@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-concat-css": "^1.1.0",
+    "gulp-filter": "^1.0.2",
+    "gulp-svg-sprites": "^1.0.3",
+    "gulp-svg2png": "^0.3.0"
+  }
+}

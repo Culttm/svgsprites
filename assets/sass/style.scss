@@ -1,0 +1,38 @@
+@import "compass";
+@import "functions";
+
+body {
+ 	$browsers-supporting-svg-but-not-gradients:(ie: "1");
+  	@include background-image(linear-gradient(to right, #2ac363, #cd8c14, #9c4cc2));
+  	color: #fff;
+}
+
+#{headings()} {
+    color: #fff; 
+}
+ 
+
+@mixin tran($color, $percentage) {
+	background-color: rgba($color, $percentage);
+
+	.no-rgba &{
+		background-color:transparent;
+		filter:transfallback($color, $percentage);
+		zoom:1;
+	}
+}
+
+.svg-sprites {
+	// Functions.scss 
+	@include tran( blue, .3);
+ 
+ 	.icon {
+		margin: 20px 0;
+	}
+}
+
+ 
+
+
+
+

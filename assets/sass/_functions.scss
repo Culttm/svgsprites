@@ -1,0 +1,7 @@
+// Функция перевода цвета в фильтр для IE9< 
+
+@function transfallback($color, $percentage) {
+    $rgba: rgba($color, $percentage);
+    $ie-hex-str: ie-hex-str($rgba);
+    @return progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
